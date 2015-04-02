@@ -1,0 +1,6 @@
+DEPENDENCIES
+  base_server
+    path: cookbooks/base_server
+
+GRAPH
+  base_server (0.1.0)
