@@ -25,3 +25,4 @@ package "make"
 package "build-essential"
 package "libpq-dev"
 package "libmagickwand-dev"
+
