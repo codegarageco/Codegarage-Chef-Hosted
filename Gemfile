@@ -9,4 +9,3 @@ gem 'knife-solo'
 gem 'knife-spec'
 gem 'rspec'
 gem 'chefspec'
-
