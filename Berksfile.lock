@@ -1,8 +1,11 @@
 DEPENDENCIES
   base_server
     path: cookbooks/base_server
+  cg_mysql
+    path: cookbooks/cg_mysql
   chef
   docker
+  mysql
   nginx
 
 GRAPH
@@ -15,6 +18,8 @@ GRAPH
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.2.2)
+  cg_mysql (0.1.0)
+    mysql (>= 0.0.0)
   chef (0.99.9)
     apache2 (>= 0.0.0)
     bluepill (>= 0.0.0)
@@ -57,6 +62,9 @@ GRAPH
     yum-erlang_solutions (>= 0.0.0)
   java (1.35.0)
   logrotate (1.9.2)
+  mysql (6.1.2)
+    smf (>= 0.0.0)
+    yum-mysql-community (>= 0.0.0)
   nginx (2.7.6)
     apt (~> 2.2)
     bluepill (~> 2.3)
@@ -68,11 +76,14 @@ GRAPH
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
   pacman (1.1.1)
+  rbac (1.0.3)
   rsyslog (1.15.0)
   runit (1.5.18)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  smf (2.2.7)
+    rbac (>= 1.0.1)
   windows (1.38.2)
     chef_handler (>= 0.0.0)
   xml (1.3.1)
@@ -85,4 +96,6 @@ GRAPH
     yum (~> 3.0)
   yum-erlang_solutions (0.2.2)
     yum (~> 3.2)
+  yum-mysql-community (0.1.18)
+    yum (>= 3.0)
   zlib (2.0.1)
