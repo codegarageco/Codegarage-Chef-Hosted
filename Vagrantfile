@@ -38,7 +38,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :docker do |int_config|
     int_config.vm.network "private_network", ip: "192.168.0.20"
     int_config.vm.provision :chef_solo do |chef|
-      chef.json = {}
+      chef.json = {
+        application: {
+          docker: {
+            host: "192.168.0.20"
+          }
+        }
+      }
       chef.run_list = [ 'application::docker' ]
     end
   end

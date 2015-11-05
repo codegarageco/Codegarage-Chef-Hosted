@@ -7,7 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
+hostname = node[:application][:docker][:host] || "#{node['ipaddress']}"
+
 docker_service 'default' do
+  host ["tcp://#{hostname}:2375", 'unix:///var/run/docker.sock']
   action [:create, :start]
 end
 

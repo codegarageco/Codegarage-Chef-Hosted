@@ -8,3 +8,4 @@
 #
 
 default[:application][:docker][:images] = []
+default[:application][:docker][:host]   = nil
