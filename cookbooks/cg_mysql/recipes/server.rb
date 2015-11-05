@@ -19,10 +19,10 @@ mysql_service server[:service_name] do
   action [:create, :start]
 end
 
-# Skip if the role is standalone
-unless server[:role].include?('standalone')
-  mysql_config 'config' do
-    config_name 'config'
+# Skip if the role is not master/slave
+if server[:role].include?('master') || server[:role].include?('slave')
+  mysql_config "#{server[:role]}_config" do
+    config_name "#{server[:role]}_config"
     cookbook 'cg_mysql'
     instance server[:service_name]
     source "#{server[:role]}_config.erb"

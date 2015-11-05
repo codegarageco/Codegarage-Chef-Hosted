@@ -20,17 +20,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         chef.json = {
           cg_mysql: {
             server: {
-              service_name: "#{role}_config",
+              service_name: "#{role}",
               server_id: "#{index + 10}",
               role: "#{role}",
-              bind_address: '192.168.0.#{index + 10}'
+              bind_address: "192.168.0.#{index + 10}"
             },
             replication: {
               host: '192.168.0.10'
             }
           }
         }
-        chef.run_list = [ "cg_mysql" ]
+        chef.run_list = [ 'cg_mysql' ]
       end
     end
   end

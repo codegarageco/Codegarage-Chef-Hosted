@@ -9,6 +9,7 @@
 
 require 'shellwords'
 
+server               = node[:cg_mysql][:server]
 replication          = node[:cg_mysql][:replication]
 replication_sql      = '/etc/mysql/replication.sql'
 replication_user     = replication[:user]
@@ -23,11 +24,11 @@ template replication_sql do
   mode "0600"
   sensitive true
   only_if do
-    server["replication"]["host"] != "" || server["role"].include?("master")
+    replication["host"] != "" || server["role"].include?("master")
   end
 end
 
-root_pass = node[:cg_mysql][:server][:root_password]
+root_pass = server[:root_password]
 root_pass = Shellwords.escape(root_pass).prepend("-p") unless root_pass.empty?
 
 execute "mysql-set-replication" do
