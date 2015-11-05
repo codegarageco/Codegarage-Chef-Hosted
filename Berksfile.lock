@@ -3,6 +3,8 @@ DEPENDENCIES
     path: cookbooks/base_server
   cg_mysql
     path: cookbooks/cg_mysql
+  cg_percona
+    path: cookbooks/cg_percona
   chef
   docker
   mysql
@@ -21,6 +23,8 @@ GRAPH
   cg_mysql (0.1.0)
     apt (>= 0.0.0)
     mysql (>= 0.0.0)
+  cg_percona (0.1.0)
+    percona (>= 0.0.0)
   chef (0.99.9)
     apache2 (>= 0.0.0)
     bluepill (>= 0.0.0)
@@ -43,6 +47,7 @@ GRAPH
   chef-server (4.1.0)
     chef-ingredient (>= 0.11.0)
   chef-sugar (3.1.1)
+  chef-vault (1.3.2)
   chef_handler (1.2.0)
   compat_resource (12.5.9)
   couchdb (2.5.2)
@@ -77,6 +82,13 @@ GRAPH
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
   pacman (1.1.1)
+  percona (0.16.1)
+    apt (>= 2.7.0)
+    build-essential (>= 0.0.0)
+    chef-vault (>= 0.0.0)
+    openssl (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
   rbac (1.0.3)
   rsyslog (1.15.0)
   runit (1.5.18)
