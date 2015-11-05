@@ -19,6 +19,7 @@ GRAPH
     rsyslog (>= 0.0.0)
   build-essential (2.2.2)
   cg_mysql (0.1.0)
+    apt (>= 0.0.0)
     mysql (>= 0.0.0)
   chef (0.99.9)
     apache2 (>= 0.0.0)

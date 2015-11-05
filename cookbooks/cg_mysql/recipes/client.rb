@@ -1,11 +1,12 @@
 #
 # Cookbook Name:: cg_mysql
-# Recipe:: default
+# Recipe:: client
 #
 # Copyright 2015, Faizal F Zakaria
 #
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'cg_mysql::server'
-include_recipe 'cg_mysql::client'
+mysql_client 'default' do
+  action :create
+end

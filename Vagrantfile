@@ -6,41 +6,32 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box_url = "http://vagrant.gygadmin.com/trusty64.json"
+  config.vm.box = "getyourguide/trusty64"
+
   config.berkshelf.enabled = true
   config.omnibus.chef_version = :latest
 
   # Master mysql
-  config.vm.define :main_mysql do |main_mysql|
-    main_mysql.vm.box = 'main_mysql'
-    main_mysql.vm.network "private_network", ip: "192.168.0.4"
-    main_mysql.vm.provision :chef_solo do |chef|
-      chef.json = {
-        cg_mysql: {
-          service_name: 'main_mysql',
-          bind_address: '192.168.0.4',
-          server_id: '3',
-          slaves: [ "192.168.0.3" ]
+  [ :master, :slave ].each_with_index do |role, index|
+    config.vm.define :"#{role}_mysql" do |int_config|
+      int_config.vm.network "private_network", ip: "192.168.0.#{index + 10}"
+      int_config.vm.provision :chef_solo do |chef|
+        chef.json = {
+          cg_mysql: {
+            server: {
+              service_name: "#{role}_config",
+              server_id: "#{index + 10}",
+              role: "#{role}",
+              bind_address: '192.168.0.#{index + 10}'
+            },
+            replication: {
+              host: '192.168.0.10'
+            }
+          }
         }
-      }
-      chef.run_list = [ "base_server", "cg_mysql::master" ]
-    end
-  end
-
-  # Slave mysql
-  config.vm.define :slave_mysql do |slave_mysql|
-    slave_mysql.vm.box = 'slave_mysql'
-    slave_mysql.vm.network "private_network", ip: "192.168.0.3"
-    slave_mysql.vm.provision :chef_solo do |chef|
-      chef.json = {
-        cg_mysql: {
-          service_name: 'slave_mysql',
-          bind_address: '192.168.0.3',
-          server_id: '4',
-          master_ip: "192.168.0.4"
-        }
-      }
-      chef.run_list = [ "base_server", "cg_mysql::slave" ]
+        chef.run_list = [ "cg_mysql" ]
+      end
     end
   end
 
