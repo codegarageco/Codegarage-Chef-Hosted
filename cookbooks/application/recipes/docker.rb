@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: base_server
+# Cookbook Name:: application
 # Recipe:: docker
 #
 # Copyright 2015, Faizal F Zakaria
@@ -9,4 +9,10 @@
 
 docker_service 'default' do
   action [:create, :start]
+end
+
+node[:application][:docker][:images].each do |image|
+  docker_image "#{image}" do
+    action :pull
+  end
 end
