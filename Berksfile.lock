@@ -20,7 +20,7 @@ GRAPH
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.2.2)
-  cg_mysql (0.1.0)
+  cg_mysql (0.1.1)
     apt (>= 0.0.0)
     mysql (>= 0.0.0)
   cg_percona (0.1.0)

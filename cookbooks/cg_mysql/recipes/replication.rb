@@ -11,7 +11,7 @@ require 'shellwords'
 
 server               = node[:cg_mysql][:server]
 replication          = node[:cg_mysql][:replication]
-replication_sql      = '/etc/mysql/replication.sql'
+replication_sql      = "/etc/mysql-#{server[:service_name]}/replication.sql"
 replication_user     = replication[:user]
 replication_password = replication[:password]
 
@@ -30,9 +30,10 @@ end
 
 root_pass = server[:root_password]
 root_pass = Shellwords.escape(root_pass).prepend("-p") unless root_pass.empty?
+socket_file = "/run/mysql-#{server[:service_name]}/mysqld.sock"
 
 execute "mysql-set-replication" do
-  command "/usr/bin/mysql #{root_pass} < #{replication_sql}"
+  command "/usr/bin/mysql -S #{socket_file} #{root_pass} < #{replication_sql}"
   action :nothing
   subscribes :run, resources("template[#{replication_sql}]"), :immediately
   sensitive true
