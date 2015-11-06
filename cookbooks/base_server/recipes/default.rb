@@ -7,12 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-bash 'apt update' do
-  user 'root'
-  code <<-EOH
-    apt-get update
-  EOH
-end
+include_recipe 'apt'
 
 package 'git'
 package 'emacs'
@@ -20,7 +15,6 @@ package 'curl'
 package "zlib1g-dev"
 package "liblzma-dev"
 package "zlibc"
-package "ruby-dev"
 package "make"
 package "build-essential"
 package "libpq-dev"
