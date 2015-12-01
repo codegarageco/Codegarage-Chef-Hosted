@@ -1,0 +1,9 @@
+{
+  "id": "deployer",
+  "ssh_keys": {
+    "encrypted_data": "zNp8wSZN3+xi4v/Ijlz21Ru4InZ5EGv0CDnUIeHBt06WcaHpbzM6Zl6yqnNK\noJGFdoJ7D0aZvpwCug8llVkkiMa9Au+7E7la2ONnlmFZScdllBpa3ZmziGNL\nz0MEQPD2Jfe0fRNtDVymKBxbHU0Z42TF+4iRD0YKl/zPPrWvnBof0GB2xkDT\nqGsIIEKAk7bqceWjc2eLFdI6BHkowhuGG2KLvaxNlGqGJrx3kTUKQEdu9im4\nc3VYV6Y5sS9014sGEtb98fLkxcSFkkA7TsD8QKXifydqlkEu/VgV3aHeIb1Y\nucsCnYnbnbo3M6zMCA+nC00LJ9FDQc5hgBFrBBrkFGMCxowhEI7ji2gWfbRI\nQ8AjYXoLYxbSmvmJ3m41OewExbTEXRzn6ExKWPXPKAu9YSq6lJmoXoTUzLKT\nsCWM8nqX+/CajFdSaRL3OldZ9Pn8qhvQ14sb8i8U+JBxHruj3u4z81tbdOsT\ns09DYC54Nbm21uFmusKlQk1iNS+XaheqcC3wwZWUS/GUt0x3NdC2/R4rc+Lz\nA0kMI920mP+xNGGweYokRfeQDqkOMnlu0zDQxqwn+ufDolL/Cc+gpmFihA==\n",
+    "iv": "XnpKE4Mh9nVl/QN12WZrbw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
