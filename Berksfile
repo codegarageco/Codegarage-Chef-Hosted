@@ -1,5 +1,4 @@
-site :opscode
-source 'https://supermarket.getchef.com'
+source "https://supermarket.chef.io"
 
 #########################################################################################
 # External cookbooks
@@ -9,6 +8,7 @@ cookbook 'nginx'
 cookbook 'docker'
 cookbook 'chef'
 cookbook 'mysql'
+cookbook 'rvm'
 
 #########################################################################################
 # In house cookbooks
