@@ -1,0 +1,26 @@
+{
+  "name": "weeggit",
+  "description": "Rails stack",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "rvm": {
+        "default_ruby": "2.2.3",
+        "gems": { "default": [ { "name": "foreman", "name": "fluentd", "name": "fluent-plugin-flowcounter" } ] },
+        "user_gems": { "default": [ { "name": "foreman", "name": "fluentd", "name": "fluent-plugin-flowcounter"} ] },
+        "user_default_ruby": "2.2.3",
+        "installs": { "deploy": true },
+        "user_installs": [{ "user": "deploy", "default_ruby": "2.2.3", "install_rubies": true }]
+    }
+  },
+  "run_list": [
+      "recipe[base_server]",
+      "recipe[application::nginx]",
+      "recipe[application::deployer]",
+      "recipe[application::rvm]",
+      "recipe[application::monit]"
+  ],
+  "env_run_lists": {
+  }
+}
