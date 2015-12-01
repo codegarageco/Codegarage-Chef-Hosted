@@ -7,10 +7,13 @@ DEPENDENCIES
     path: cookbooks/cg_mysql
   cg_percona
     path: cookbooks/cg_percona
+  cg_postgresql
+    path: cookbooks/cg_postgresql
   chef
   docker
   mysql
   nginx
+  postgresql
   rvm
 
 GRAPH
@@ -33,6 +36,8 @@ GRAPH
     mysql (>= 0.0.0)
   cg_percona (0.1.0)
     percona (>= 0.0.0)
+  cg_postgresql (0.2.0)
+    postgresql (>= 0.0.0)
   chef (0.99.9)
     apache2 (>= 0.0.0)
     bluepill (>= 0.0.0)
@@ -98,6 +103,10 @@ GRAPH
     openssl (>= 0.0.0)
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
+  postgresql (3.4.24)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0)
   rbac (1.0.3)
   rsyslog (1.15.0)
   run-notifier (0.2.5)

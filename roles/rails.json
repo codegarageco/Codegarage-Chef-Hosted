@@ -1,5 +1,5 @@
 {
-  "name": "weeggit",
+  "name": "rails",
   "description": "Rails stack",
   "json_class": "Chef::Role",
   "default_attributes": {
