@@ -1,0 +1,12 @@
+<%= "#{node['nginx']['log_dir']}/*.log" %> {
+        rotate 4
+        weekly
+        minsize 1M
+        missingok
+        notifempty
+        sharedscripts
+        create 644 root root
+        postrotate
+                [ ! -f /var/run/nginx.pid ] || kill -USR1 `cat /var/run/nginx.pid`
+        endscript
+}

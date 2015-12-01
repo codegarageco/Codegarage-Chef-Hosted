@@ -9,3 +9,8 @@
 
 default[:application][:docker][:images] = []
 default[:application][:docker][:host]   = nil
+default[:application][:docker][:dir]    = '/opt/docker'
+
+# Docker registry
+default[:application][:docker][:registry][:dir] = "#{node[:application][:docker][:dir]}/registry"
+
