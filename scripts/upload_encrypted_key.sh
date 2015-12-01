@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 SCRIPTS_DIR=$(dirname ${0:-})
 ROOT_DIR="$SCRIPTS_DIR/.."
 
@@ -40,4 +39,3 @@ else
   read server
   upload_keys $server
 fi
-

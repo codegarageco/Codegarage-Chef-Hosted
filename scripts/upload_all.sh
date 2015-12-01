@@ -44,8 +44,8 @@ pushd $ROOT_DIR
 #
 if [ "$UPDATE_COOKBOOKS" == "true" ] || [ "$UPDATE_ALL" == "true" ]; then
   p_info "Upload cookbooks"
-  knife cookbook upload -a
   berks upload
+  knife cookbook upload -a
 fi
 
 #
