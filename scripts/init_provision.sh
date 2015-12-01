@@ -65,6 +65,10 @@ knife bootstrap $SERVER -N $SERVERNAME.duriana.com
 # Copy aws encrypted data
 #
 if [ ! -z $3 ]; then
-  scp $3 $USER@$SERVER:/etc/chef/
-  check_error
+  ENCRYPTED_FILE=$3
+else
+  ENCRYPTED_FILE=~/.chef/encrypted_data_bag_secret
 fi
+scp $ENCRYPTED_FILE $USER@$SERVER:/etc/chef/
+check_error
+
