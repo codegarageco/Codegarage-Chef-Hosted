@@ -4,16 +4,7 @@
   "json_class": "Chef::Role",
   "default_attributes": {
   },
-  "override_attributes": {
-    "rvm": {
-        "default_ruby": "2.2.3",
-        "gems": { "default": [ { "name": "foreman", "name": "fluentd", "name": "fluent-plugin-flowcounter" } ] },
-        "user_gems": { "default": [ { "name": "foreman", "name": "fluentd", "name": "fluent-plugin-flowcounter"} ] },
-        "user_default_ruby": "2.2.3",
-        "installs": { "deploy": true },
-        "user_installs": [{ "user": "deploy", "default_ruby": "2.2.3", "install_rubies": true }]
-    }
-  },
+  "override_attributes": {},
   "run_list": [
       "role[rails]",
       "role[database]",
