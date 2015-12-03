@@ -25,7 +25,7 @@ end
 execute 'craete-role' do
   command "sudo -u postgres /usr/bin/psql < #{create_roles_sql}"
   action :nothing
-  subscribes :run, resources("template[#{replication_sql}]"), :immediately
+  subscribes :run, resources("template[#{create_roles_sql}]"), :immediately
   sensitive true
 end
 
