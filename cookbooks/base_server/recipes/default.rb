@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'base_server::apt_source'
 include_recipe 'apt'
 
 package 'git'
@@ -20,4 +21,3 @@ package "build-essential"
 package "libpq-dev"
 package "libmagickwand-dev"
 package "libgmp-dev"
-
