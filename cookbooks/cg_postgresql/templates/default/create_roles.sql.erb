@@ -3,8 +3,8 @@
 
 <% @roles.each do |role| %>
 
-CREATE USER <%= role['username'] %> WITH PASSWORD <%= role['password'] %>
-CREATE DATABASE <%= role['database'] %> owner <%= role['username'] %>
+CREATE USER <%= role['username'] %> WITH PASSWORD '<%= role['password'] %>';
+CREATE DATABASE <%= role['database'] %> owner <%= role['username'] %>;
 
 <% end %>
 
