@@ -1,16 +1,2 @@
 # Codegarage-Chef-Hosted
-Codegarage Chef Hosted
-
-# Pre-requisites
-- At least Vagrant 1.5
-- vagrant
-- vagrant-omnibus
-- vagrant-berkshelf
-
-# Add plugins
-
-```
-vagrant plugin install vagrant-omnibus
-vagrant plugin install vagrant-berkshelf
-```
-
+Codegarage Chef Hosted. This is tested with Chef Server, and not well tested with Chef solo or what so ever. Only for Ubuntu for now.
