@@ -43,7 +43,7 @@ pushd $ROOT_DIR
 # Upload all cookbooks
 #
 if [ "$UPDATE_COOKBOOKS" == "true" ] || [ "$UPDATE_ALL" == "true" ]; then
-  p_info "Upload cookbooks"
+  p_info "Uploading cookbooks"
   berks upload
   knife cookbook upload -a
 fi
@@ -52,7 +52,7 @@ fi
 # Upload all roles
 #
 if [ "$UPDATE_ROLES" == "true" ] || [ "$UPDATE_ALL" == "true" ]; then
-  p_info "Upload roles"
+  p_info "Uploading roles"
   knife role from file roles/*.json
 fi
 
@@ -60,7 +60,7 @@ fi
 # Upload all environments
 #
 if [ "$UPDATE_ENVIRONMENTS" == "true" ] || [ "$UPDATE_ALL" == "true" ]; then
-  p_info "Upload environments"
+  p_info "Uploading environments"
   environments=`ls ./environments`
   for environment in $environments
   do
@@ -72,7 +72,7 @@ fi
 # Upload all data bags
 #
 if [ "$UPDATE_DATA_BAGS" == "true" ] || [ "$UPDATE_ALL" == "true" ]; then
-  p_info "Upload data bags"
+  p_info "Uploading data bags"
   data_bags=`ls ./data_bags`
   for data_bag in $data_bags
   do
