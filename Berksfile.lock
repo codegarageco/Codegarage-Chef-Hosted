@@ -11,6 +11,9 @@ DEPENDENCIES
     path: cookbooks/cg_postgresql
   chef
   docker
+  hubot
+    git: git@github.com:tas50/hubot.git
+    revision: 702dc8a465f152bc24110e8aa47da80cf6c53270
   mysql
   nginx
   postgresql
@@ -19,6 +22,8 @@ DEPENDENCIES
     path: cookbooks/weeggit_service
 
 GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
   apache2 (3.1.0)
   application (0.1.4)
     docker (>= 0.0.0)
@@ -28,6 +33,9 @@ GRAPH
   apt (2.7.0)
   apt-chef (0.2.0)
     apt (>= 0.0.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
   base_server (0.3.0)
     apt (>= 0.0.0)
   bluepill (2.3.1)
@@ -74,6 +82,7 @@ GRAPH
   daemontools (1.5.0)
     build-essential (>= 0.0.0)
     pacman (>= 0.0.0)
+  dmg (2.3.0)
   docker (2.2.3)
     compat_resource (>= 0.0.0)
   erlang (1.5.8)
@@ -82,6 +91,18 @@ GRAPH
     yum (~> 3.0)
     yum-epel (>= 0.0.0)
     yum-erlang_solutions (>= 0.0.0)
+  git (4.3.5)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  homebrew (2.0.3)
+    build-essential (>= 2.1.2)
+  hubot (1.0.7)
+    git (>= 0.0.0)
+    nodejs (>= 0.0.0)
+    runit (>= 0.0.0)
+    supervisor (>= 0.0.0)
   java (1.35.0)
   logrotate (1.9.2)
   mysql (6.1.2)
@@ -94,6 +115,12 @@ GRAPH
     ohai (~> 2.0)
     runit (~> 1.2)
     yum-epel (~> 0.3)
+  nodejs (2.4.4)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   ohai (2.0.1)
   openssl (4.4.0)
     chef-sugar (>= 3.1.1)
@@ -109,6 +136,9 @@ GRAPH
     apt (>= 1.9.0)
     build-essential (>= 0.0.0)
     openssl (~> 4.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   rbac (1.0.3)
   rsyslog (1.15.0)
   run-notifier (0.2.5)
@@ -122,6 +152,8 @@ GRAPH
     java (>= 0.0.0)
   smf (2.2.7)
     rbac (>= 1.0.1)
+  supervisor (0.4.12)
+    python (>= 0.0.0)
   weeggit_service (0.1.1)
   windows (1.38.2)
     chef_handler (>= 0.0.0)

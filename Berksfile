@@ -10,6 +10,7 @@ cookbook 'chef'
 cookbook 'mysql'
 cookbook 'rvm'
 cookbook 'postgresql'
+cookbook 'hubot',                        git: 'git@github.com:tas50/hubot.git'
 
 #########################################################################################
 # In house cookbooks
