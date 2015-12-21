@@ -12,8 +12,9 @@ DEPENDENCIES
   chef
   docker
   hubot
-    git: git@github.com:tas50/hubot.git
-    revision: 702dc8a465f152bc24110e8aa47da80cf6c53270
+    path: ../hubot
+  hubot_service
+    path: cookbooks/hubot_service
   mysql
   nginx
   postgresql
@@ -103,6 +104,8 @@ GRAPH
     nodejs (>= 0.0.0)
     runit (>= 0.0.0)
     supervisor (>= 0.0.0)
+  hubot_service (0.1.1)
+    hubot (>= 0.0.0)
   java (1.35.0)
   logrotate (1.9.2)
   mysql (6.1.2)

@@ -1,0 +1,15 @@
+{
+  "id": "envs",
+  "slack_token": {
+    "encrypted_data": "dew5ewiwR502NTBWPH97Tzmk6HBzvGzaj5KXeZbm41GCHnWxg/EryxOyP8Fq\ngHGVkswdsTec6kgobCF9bd7xDg==\n",
+    "iv": "HUyX0u1+5TKkrp5qp86EUg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "port": {
+    "encrypted_data": "tFZGfIGtrhPB4ewpHlLyCRwMOgY0vLVtEPRh8hlmZcg=\n",
+    "iv": "krtPMFLswgdH/FY6rrzU+A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

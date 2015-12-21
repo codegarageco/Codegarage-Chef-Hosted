@@ -10,7 +10,7 @@ cookbook 'chef'
 cookbook 'mysql'
 cookbook 'rvm'
 cookbook 'postgresql'
-cookbook 'hubot',                        git: 'git@github.com:tas50/hubot.git'
+cookbook 'hubot',                       path: '/Users/faizal/workspace/startup/hubot'
 
 #########################################################################################
 # In house cookbooks
@@ -22,4 +22,4 @@ cookbook 'cg_mysql',                     path: 'cookbooks/cg_mysql'
 cookbook 'cg_percona',                   path: 'cookbooks/cg_percona'
 cookbook 'cg_postgresql',                path: 'cookbooks/cg_postgresql'
 cookbook 'weeggit_service',              path: 'cookbooks/weeggit_service'
-
+cookbook 'hubot_service',                path: 'cookbooks/hubot_service'
