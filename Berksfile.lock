@@ -12,7 +12,8 @@ DEPENDENCIES
   chef
   docker
   hubot
-    path: ../hubot
+    git: git@github.com:codegarageco/hubot.git
+    revision: 702dc8a465f152bc24110e8aa47da80cf6c53270
   hubot_service
     path: cookbooks/hubot_service
   mysql

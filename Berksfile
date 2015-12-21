@@ -10,7 +10,7 @@ cookbook 'chef'
 cookbook 'mysql'
 cookbook 'rvm'
 cookbook 'postgresql'
-cookbook 'hubot',                       path: '/Users/faizal/workspace/startup/hubot'
+cookbook 'hubot',                        git: 'git@github.com:codegarageco/hubot.git'
 
 #########################################################################################
 # In house cookbooks
