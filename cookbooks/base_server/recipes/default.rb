@@ -9,6 +9,7 @@
 
 include_recipe 'base_server::apt_source'
 include_recipe 'apt'
+include_recipe 'chef-client'
 
 package 'git'
 package 'emacs'

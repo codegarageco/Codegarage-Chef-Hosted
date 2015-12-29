@@ -10,6 +10,7 @@ DEPENDENCIES
   cg_postgresql
     path: cookbooks/cg_postgresql
   chef
+  chef-client
   docker
   hubot
     git: git@github.com:codegarageco/hubot.git
@@ -38,8 +39,9 @@ GRAPH
   ark (0.9.0)
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
-  base_server (0.3.0)
+  base_server (0.4.0)
     apt (>= 0.0.0)
+    chef-client (>= 0.0.0)
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.2.2)
@@ -62,7 +64,7 @@ GRAPH
     runit (>= 0.0.0)
     xml (>= 0.0.0)
     zlib (>= 0.0.0)
-  chef-client (4.3.1)
+  chef-client (4.3.2)
     cron (>= 1.2.0)
     logrotate (>= 1.2.0)
     windows (~> 1.37)

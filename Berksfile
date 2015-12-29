@@ -10,6 +10,7 @@ cookbook 'chef'
 cookbook 'mysql'
 cookbook 'rvm'
 cookbook 'postgresql'
+cookbook 'chef-client'
 cookbook 'hubot',                        git: 'git@github.com:codegarageco/hubot.git'
 
 #########################################################################################
