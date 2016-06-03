@@ -4,14 +4,15 @@ source "https://supermarket.chef.io"
 # External cookbooks
 #########################################################################################
 
-cookbook 'nginx'
-cookbook 'docker'
-cookbook 'chef'
-cookbook 'mysql'
-cookbook 'rvm'
-cookbook 'postgresql'
-cookbook 'chef-client'
-cookbook 'hubot',                        git: 'git@github.com:codegarageco/hubot.git'
+cookbook 'nginx',                       '~> 2.7.6'
+cookbook 'docker',                      '~> 2.2.3'
+cookbook 'chef',                        '~> 0.99.9'
+cookbook 'mysql',                       '~> 6.1.2'
+cookbook 'rvm',                         '~> 0.9.4'
+cookbook 'postgresql',                  '~> 3.4.24'
+cookbook 'chef-client',                 '~> 4.3.2'
+cookbook 'chef-server',                 '~> 4.1.0'
+cookbook 'hubot',                       git: 'git@github.com:codegarageco/hubot.git'
 
 #########################################################################################
 # In house cookbooks
