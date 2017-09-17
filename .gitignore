@@ -1,4 +1,4 @@
-.chef
+.chef/knife.rb
 nodes/*
 .vagrant/*
 .rvmrc

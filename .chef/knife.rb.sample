@@ -1,0 +1,15 @@
+current_dir = File.dirname(__FILE__)
+
+cookbook_path    ["cookbooks", "site-cookbooks"]
+node_path        "nodes"
+role_path        "roles"
+environment_path "environments"
+data_bag_path    "data_bags"
+#encrypted_data_bag_secret "data_bag_key"
+
+knife[:berkshelf_path] = "cookbooks"
+knife[:whisk_config_file] = "#{current_dir}/../config/whisk.yml"
+knife[:aws_access_key_id]     = "AWS REGION"
+knife[:aws_secret_access_key] = "AWS SCRET ACCESS KEY"
+knife[:region]                = "AWS REGION"
+Chef::Config[:ssl_verify_mode] = :verify_peer if defined? ::Chef
