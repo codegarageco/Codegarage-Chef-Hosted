@@ -15,7 +15,7 @@
       "source_ami": "ami-cd0f5cb6",
       "instance_type": "t2.micro",
       "ssh_username": "{{user `ec2_user`}}",
-      "ami_name": "cg-baseimage_{{isotime \"2017.01.01.2020\"}}"
+      "ami_name": "cg-baseimage_{{isotime \"2017.31.01.1900\"}}"
     }
   ],
   "provisioners": [
