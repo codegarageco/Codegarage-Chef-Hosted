@@ -251,3 +251,6 @@ DEPENDENCIES
   knife-spec
   rspec
   test-kitchen
+
+BUNDLED WITH
+   1.15.4
