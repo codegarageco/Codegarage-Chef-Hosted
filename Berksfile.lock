@@ -1,6 +1,7 @@
 DEPENDENCIES
   application
     path: cookbooks/application
+  apt (~> 2.9.2)
   base_server
     path: cookbooks/base_server
   cg_mysql
@@ -35,7 +36,7 @@ GRAPH
     nginx (>= 0.0.0)
     run-notifier (>= 0.0.0)
     rvm (>= 0.0.0)
-  apt (2.7.0)
+  apt (2.9.2)
   apt-chef (0.2.0)
     apt (>= 0.0.0)
   ark (0.9.0)
