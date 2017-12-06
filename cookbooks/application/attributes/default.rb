@@ -58,3 +58,6 @@ default['nginx']['source']['modules']  = %w(
   nginx::ipv6
 )
 default['nginx']['source']['use_existing_user'] = false
+
+# users
+default['groups'] = Array.new

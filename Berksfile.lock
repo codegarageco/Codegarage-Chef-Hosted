@@ -11,6 +11,7 @@ DEPENDENCIES
     path: cookbooks/cg_postgresql
   chef
   chef-client
+  chef-server (~> 4.1.0)
   docker
   hubot
     git: git@github.com:codegarageco/hubot.git
@@ -21,6 +22,7 @@ DEPENDENCIES
   nginx
   postgresql
   rvm
+  users (~> 2.0.3)
   weeggit_service
     path: cookbooks/weeggit_service
 
@@ -28,7 +30,7 @@ GRAPH
   7-zip (1.0.2)
     windows (>= 1.2.2)
   apache2 (3.1.0)
-  application (0.1.4)
+  application (0.1.5)
     docker (>= 0.0.0)
     nginx (>= 0.0.0)
     run-notifier (>= 0.0.0)
@@ -160,6 +162,7 @@ GRAPH
     rbac (>= 1.0.1)
   supervisor (0.4.12)
     python (>= 0.0.0)
+  users (2.0.3)
   weeggit_service (0.1.1)
   windows (1.38.2)
     chef_handler (>= 0.0.0)

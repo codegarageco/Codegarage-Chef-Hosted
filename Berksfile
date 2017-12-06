@@ -13,6 +13,7 @@ cookbook 'postgresql',                  '~> 3.4.24'
 cookbook 'chef-client',                 '~> 4.3.2'
 cookbook 'chef-server',                 '~> 4.1.0'
 cookbook 'hubot',                       git: 'git@github.com:codegarageco/hubot.git'
+cookbook 'users',                       '~> 2.0.3'
 
 #########################################################################################
 # In house cookbooks
