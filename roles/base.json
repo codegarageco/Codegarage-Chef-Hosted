@@ -9,10 +9,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[base_config]",
-    "recipe[apache_user]",
-    "recipe[application::users]",
-    "recipe[sudo]"
+    "recipe[base_server]",
+    "recipe[application::users]"
   ],
   "env_run_lists": {
   }
