@@ -3,4 +3,5 @@ nodes/*
 .vagrant/*
 .rvmrc
 packer/uservars.json
+sitecookbooks/*
 
