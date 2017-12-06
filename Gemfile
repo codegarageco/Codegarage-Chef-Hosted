@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'chef'
 gem 'test-kitchen'
 gem 'kitchen-vagrant'
