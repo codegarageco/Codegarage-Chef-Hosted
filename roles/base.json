@@ -1,0 +1,19 @@
+{
+  "name": "base",
+  "description": "Base configurations that we want for all servers",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "groups": [ "sysadmins" ]
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[base_config]",
+    "recipe[apache_user]",
+    "recipe[application::users]",
+    "recipe[sudo]"
+  ],
+  "env_run_lists": {
+  }
+}
