@@ -4,6 +4,7 @@ source "https://supermarket.chef.io"
 # External cookbooks
 #########################################################################################
 
+cookbook 'build-essential',             '~> 2.4.0'
 cookbook 'apt',                         '~> 2.9.2'
 cookbook 'nginx',                       '~> 2.7.6'
 cookbook 'docker',                      '~> 2.2.3'

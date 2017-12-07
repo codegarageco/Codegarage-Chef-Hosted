@@ -7,13 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'base_server::apt_source'
+# include_recipe 'base_server::apt_source'
 include_recipe 'apt'
 include_recipe 'chef-client'
+include_recipe 'build-essential'
 
+package 'libc-dev'
 package 'git'
 package 'emacs'
 package 'curl'
+package 'zlib1g'
 package "zlib1g-dev"
 package "liblzma-dev"
 package "zlibc"
@@ -22,3 +25,4 @@ package "build-essential"
 package "libpq-dev"
 package "libmagickwand-dev"
 package "libgmp-dev"
+
