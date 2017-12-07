@@ -23,7 +23,8 @@
       "type": "chef-solo",
       "cookbook_paths": [ "../cookbooks", "../sitecookbooks" ],
       "roles_path": "../roles",
-      "run_list": [ "role[base]" ]
+      "run_list": [ "role[base]" ],
+      "version": "12.5"
     }
   ]
 }
